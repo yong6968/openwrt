@@ -9,4 +9,4 @@
 
 编译好的 r4插件 （内集成 wireguard 和 SSR-Plus）
 
-# 定制软件 luci-proto-wireguard prometheus-node-exporter-ucode-wireguard rpcd-mod-wireguard wireguard-tools kmod-wireguard -luci-proto-wireguard
+# luci-proto-wireguard prometheus-node-exporter-ucode-wireguard rpcd-mod-wireguard wireguard-tools kmod-wireguard -luci-proto-wireguard
