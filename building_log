@@ -1,0 +1,1169 @@
+Building images for rockchip - FriendlyARM NanoPi R4S
+Packages: iptables-nft kmod-wireguard luci-app-filemanager luci-app-istorex luci-app-ssr-plus luci-nginx luci-theme-argon miniupnpd-nftables prometheus-node-exporter-ucode-wireguard rpcd-mod-wireguard wireguard-tools autocore base-files bash block-mount ca-bundle coremark curl dnsmasq-full dropbear ds-lite e2fsprogs fdisk firewall4 fstools htop kernel kmod-drm-rockchip kmod-gpio-button-hotplug kmod-lib-zstd kmod-r8169 kmod-tcp-bbr libc libgcc libustream-mbedtls logd lsblk luci-app-advancedplus luci-app-fan luci-app-filemanager luci-app-firewall luci-app-package-manager luci-app-syscontrol luci-app-upnp luci-app-wizard luci-base luci-compat luci-lib-fs luci-lib-ipkg mkf2fs mtd nano netifd odhcp6c odhcpd-ipv6only openssh-sftp-server opkg partx-utils ppp ppp-mod-pppoe resolveip swconfig uboot-envtools uci uclient-fetch urandom-seed urngd wget-ssl zram-swap
+
+
+Installing packages...
+Installing libc (1.2.5-r4) to root...
+Installing libgcc1 (13.3.0-r4) to root...
+Downloading file:packages/libgcc1_13.3.0-r4_aarch64_generic.ipk
+Configuring libgcc1.
+Configuring libc.
+Installing kernel (6.6.75~1-r1) to root...
+Configuring kernel.
+Installing iptables-nft (1.8.10-r1) to root...
+Downloading file:packages/iptables-nft_1.8.10-r1_aarch64_generic.ipk
+Installing kmod-nf-reject (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-reject_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-ipt (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-ipt_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-log (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-log_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-ipt-core (6.6.75-r1) to root...
+Downloading file:packages/kmod-ipt-core_6.6.75-r1_aarch64_generic.ipk
+Installing libmnl0 (1.0.5-r1) to root...
+Downloading file:packages/libmnl0_1.0.5-r1_aarch64_generic.ipk
+Installing libnftnl11 (1.2.8-r1) to root...
+Downloading file:packages/libnftnl11_1.2.8-r1_aarch64_generic.ipk
+Installing libxtables12 (1.8.10-r1) to root...
+Downloading file:packages/libxtables12_1.8.10-r1_aarch64_generic.ipk
+Installing libiptext0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext0_1.8.10-r1_aarch64_generic.ipk
+Installing libiptext6-0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext6-0_1.8.10-r1_aarch64_generic.ipk
+Installing libiptext-nft0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext-nft0_1.8.10-r1_aarch64_generic.ipk
+Installing kmod-nfnetlink (6.6.75-r1) to root...
+Downloading file:packages/kmod-nfnetlink_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-reject6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-reject6_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-conntrack_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-conntrack6_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-nat (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-nat_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-log6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-log6_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-hash (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-hash_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-crc32c (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-crc32c_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-lib-crc32c (6.6.75-r1) to root...
+Downloading file:packages/kmod-lib-crc32c_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-core (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-core_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-compat (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-compat_6.6.75-r1_aarch64_generic.ipk
+Installing xtables-nft (1.8.10-r1) to root...
+Downloading file:packages/xtables-nft_1.8.10-r1_aarch64_generic.ipk
+Installing kmod-wireguard (6.6.75-r1) to root...
+Downloading file:packages/kmod-wireguard_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-lib-chacha20 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-lib-chacha20_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-lib-poly1305 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-lib-poly1305_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-lib-chacha20poly1305 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-lib-chacha20poly1305_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-kpp (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-kpp_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-lib-curve25519 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-lib-curve25519_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-udptunnel4 (6.6.75-r1) to root...
+Downloading file:packages/kmod-udptunnel4_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-udptunnel6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-udptunnel6_6.6.75-r1_aarch64_generic.ipk
+Installing luci-app-filemanager (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-app-filemanager_26.049.66344~2b8e93c_all.ipk
+Installing libubox20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libubox20240329_2024.03.29~eb9bcb64-r1_aarch64_generic.ipk
+Installing libubus20250102 (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/libubus20250102_2025.01.02~afa57cce-r1_aarch64_generic.ipk
+Installing libuci20250120 (2025.01.20~16ff0bad-r1) to root...
+Downloading file:packages/libuci20250120_2025.01.20~16ff0bad-r1_aarch64_generic.ipk
+Installing libjson-c5 (0.18-r1) to root...
+Downloading file:packages/libjson-c5_0.18-r1_aarch64_generic.ipk
+Installing libblobmsg-json20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libblobmsg-json20240329_2024.03.29~eb9bcb64-r1_aarch64_generic.ipk
+Installing rpcd (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd_2024.09.17~9f4b86e7-r1_aarch64_generic.ipk
+Installing rpcd-mod-file (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-file_2024.09.17~9f4b86e7-r1_aarch64_generic.ipk
+Installing libnl-tiny1 (2023.12.05~965c4bf4-r1) to root...
+Downloading file:packages/libnl-tiny1_2023.12.05~965c4bf4-r1_aarch64_generic.ipk
+Installing rpcd-mod-luci (20240305-r1) to root...
+Downloading file:packages/rpcd-mod-luci_20240305-r1_aarch64_generic.ipk
+Installing libucode20230711 (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/libucode20230711_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing rpcd-mod-ucode (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-ucode_2024.09.17~9f4b86e7-r1_aarch64_generic.ipk
+Installing cgi-io (2022.08.10~901b0f04-r21) to root...
+Downloading file:packages/cgi-io_2022.08.10~901b0f04-r21_aarch64_generic.ipk
+Installing ucode (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing ucode-mod-fs (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-fs_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing ucode-mod-uci (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-uci_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing ucode-mod-ubus (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-ubus_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing ucode-mod-math (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-math_2025.02.10~a8a11aea-r1_aarch64_generic.ipk
+Installing ucode-mod-html (1) to root...
+Downloading file:packages/ucode-mod-html_1_aarch64_generic.ipk
+Installing liblucihttp0 (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp0_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing liblucihttp-ucode (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp-ucode_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing luci-base (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-base_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing luci-app-istorex (26.048.56239~9a0f2c7) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-istorex_26.048.56239~9a0f2c7_all.ipk
+Installing ubusd (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/ubusd_2025.01.02~afa57cce-r1_aarch64_generic.ipk
+Installing ubus (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/ubus_2025.01.02~afa57cce-r1_aarch64_generic.ipk
+Installing libjson-script20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libjson-script20240329_2024.03.29~eb9bcb64-r1_aarch64_generic.ipk
+Installing ubox (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/ubox_2024.04.26~85f10530-r1_aarch64_generic.ipk
+Installing libudebug (2023.12.06~6d3f51f9) to root...
+Downloading file:packages/libudebug_2023.12.06~6d3f51f9_aarch64_generic.ipk
+Installing jshn (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/jshn_2024.03.29~eb9bcb64-r1_aarch64_generic.ipk
+Installing procd (2024.12.22~42d39376-r1) to root...
+Downloading file:packages/procd_2024.12.22~42d39376-r1_aarch64_generic.ipk
+Installing libpthread (1.2.5-r4) to root...
+Downloading file:packages/libpthread_1.2.5-r4_aarch64_generic.ipk
+Installing librt (1.2.5-r4) to root...
+Downloading file:packages/librt_1.2.5-r4_aarch64_generic.ipk
+Installing script-utils (2.40.2-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/script-utils_2.40.2-r1_aarch64_generic.ipk
+Installing coreutils (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/coreutils_9.3-r1_aarch64_generic.ipk
+Installing coreutils-stty (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/coreutils-stty_9.3-r1_aarch64_generic.ipk
+Installing taskd (1.0.3-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/taskd_1.0.3-r3_all.ipk
+Installing liblua5.1.5 (5.1.5-r11) to root...
+Downloading file:packages/liblua5.1.5_5.1.5-r11_aarch64_generic.ipk
+Installing lua (5.1.5-r11) to root...
+Downloading file:packages/lua_5.1.5-r11_aarch64_generic.ipk
+Installing luci-lib-nixio (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lib-nixio_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing luci-lib-ip (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lib-ip_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing luci-lib-jsonc (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lib-jsonc_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing liblucihttp-lua (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp-lua_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing luci-lib-base (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lib-base_26.049.66344~2b8e93c_all.ipk
+Installing libubus-lua (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/libubus-lua_2025.01.02~afa57cce-r1_aarch64_generic.ipk
+Installing ucode-mod-lua (1) to root...
+Downloading file:packages/ucode-mod-lua_1_aarch64_generic.ipk
+Installing luci-lua-runtime (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lua-runtime_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing luci-lib-xterm (25.315.74766~d33a273) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-lib-xterm_25.315.74766~d33a273_all.ipk
+Installing luci-lib-taskd (26.022.56353~0d75cd3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-lib-taskd_26.022.56353~0d75cd3_all.ipk
+Installing shadow-utils (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/shadow-utils_4.8.1-r3_aarch64_generic.ipk
+Installing shadow-common (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/shadow-common_4.8.1-r3_aarch64_generic.ipk
+Installing shadow-useradd (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/shadow-useradd_4.8.1-r3_aarch64_generic.ipk
+Installing libuuid1 (2.40.2-r1) to root...
+Downloading file:packages/libuuid1_2.40.2-r1_aarch64_generic.ipk
+Installing libblkid1 (2.40.2-r1) to root...
+Downloading file:packages/libblkid1_2.40.2-r1_aarch64_generic.ipk
+Installing libmount1 (2.40.2-r1) to root...
+Downloading file:packages/libmount1_2.40.2-r1_aarch64_generic.ipk
+Installing libsmartcols1 (2.40.2-r1) to root...
+Downloading file:packages/libsmartcols1_2.40.2-r1_aarch64_generic.ipk
+Installing mount-utils (2.40.2-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/mount-utils_2.40.2-r1_aarch64_generic.ipk
+Installing fstools (2024.07.14~408c2cc4-r1) to root...
+Downloading file:packages/fstools_2024.07.14~408c2cc4-r1_aarch64_generic.ipk
+Installing block-mount (2024.07.14~408c2cc4-r1) to root...
+Downloading file:packages/block-mount_2024.07.14~408c2cc4-r1_aarch64_generic.ipk
+Installing terminfo (6.4-r2) to root...
+Downloading file:packages/terminfo_6.4-r2_aarch64_generic.ipk
+Installing libncurses6 (6.4-r2) to root...
+Downloading file:packages/libncurses6_6.4-r2_aarch64_generic.ipk
+Installing lsblk (2.40.2-r1) to root...
+Downloading file:packages/lsblk_2.40.2-r1_aarch64_generic.ipk
+Installing libcomerr0 (1.47.0-r2) to root...
+Downloading file:packages/libcomerr0_1.47.0-r2_aarch64_generic.ipk
+Installing libss2 (1.47.0-r2) to root...
+Downloading file:packages/libss2_1.47.0-r2_aarch64_generic.ipk
+Installing libext2fs2 (1.47.0-r2) to root...
+Downloading file:packages/libext2fs2_1.47.0-r2_aarch64_generic.ipk
+Installing libe2p2 (1.47.0-r2) to root...
+Downloading file:packages/libe2p2_1.47.0-r2_aarch64_generic.ipk
+Installing e2fsprogs (1.47.0-r2) to root...
+Downloading file:packages/e2fsprogs_1.47.0-r2_aarch64_generic.ipk
+Installing libparted (3.6-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libparted_3.6-r1_aarch64_generic.ipk
+Installing libreadline8 (8.2-r2) to root...
+Downloading file:packages/libreadline8_8.2-r2_aarch64_generic.ipk
+Installing parted (3.6-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/parted_3.6-r1_aarch64_generic.ipk
+Installing libstdcpp6 (13.3.0-r4) to root...
+Downloading file:packages/libstdcpp6_13.3.0-r4_aarch64_generic.ipk
+Installing smartmontools (7.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/smartmontools_7.4-r1_aarch64_generic.ipk
+Installing smartd (7.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/smartd_7.4-r1_aarch64_generic.ipk
+Installing kmod-md-mod (6.6.75-r1) to root...
+Downloading file:packages/kmod-md-mod_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-md-raid0 (6.6.75-r1) to root...
+Downloading file:packages/kmod-md-raid0_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-md-raid10 (6.6.75-r1) to root...
+Downloading file:packages/kmod-md-raid10_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-md-raid1 (6.6.75-r1) to root...
+Downloading file:packages/kmod-md-raid1_6.6.75-r1_aarch64_generic.ipk
+Installing mdadm (4.3-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/mdadm_4.3-r2_aarch64_generic.ipk
+Installing zlib (1.3.1-r1) to root...
+Downloading file:packages/zlib_1.3.1-r1_aarch64_generic.ipk
+Installing libelf1 (0.192-r1) to root...
+Downloading file:packages/libelf1_0.192-r1_aarch64_generic.ipk
+Installing libbpf1 (1.5.0-r1) to root...
+Downloading file:packages/libbpf1_1.5.0-r1_aarch64_generic.ipk
+Installing ip-full (6.11.0-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/ip-full_6.11.0-r1_aarch64_generic.ipk
+Installing uci (2025.01.20~16ff0bad-r1) to root...
+Downloading file:packages/uci_2025.01.20~16ff0bad-r1_aarch64_generic.ipk
+Installing bash (5.2.32-r1) to root...
+Downloading file:packages/bash_5.2.32-r1_aarch64_generic.ipk
+Installing quickstart (0.9.6-r6) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/quickstart_0.9.6-r6_aarch64_generic.ipk
+Installing libcap (2.69-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/libcap_2.69-r1_aarch64_generic.ipk
+Installing libopenssl3 (3.0.15-r1) to root...
+Downloading file:packages/libopenssl3_3.0.15-r1_aarch64_generic.ipk
+Installing libuv1 (1.48.0-r1) to root...
+Downloading file:packages/libuv1_1.48.0-r1_aarch64_generic.ipk
+Installing libwebsockets-full (4.3.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libwebsockets-full_4.3.3-r1_aarch64_generic.ipk
+Installing ttyd (1.7.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/ttyd_1.7.3-r1_aarch64_generic.ipk
+Installing luci-app-ttyd (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-app-ttyd_25.049.66344~2b8e93c_all.ipk
+Installing luci-app-quickstart (25.357.56261~5502f5e) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-quickstart_25.357.56261~5502f5e_all.ipk
+Installing libnghttp2-14 (1.63.0-r1) to root...
+Downloading file:packages/libnghttp2-14_1.63.0-r1_aarch64_generic.ipk
+Installing ca-bundle (20240203-r1) to root...
+Downloading file:packages/ca-bundle_20240203-r1_all.ipk
+Installing libcurl4 (8.10.1-r1) to root...
+Downloading file:packages/libcurl4_8.10.1-r1_aarch64_generic.ipk
+Installing curl (8.10.1-r1) to root...
+Downloading file:packages/curl_8.10.1-r1_aarch64_generic.ipk
+Installing libuclient20201210 (2024.10.22~88ae8f20-r1) to root...
+Downloading file:packages/libuclient20201210_2024.10.22~88ae8f20-r1_aarch64_generic.ipk
+Installing uclient-fetch (2024.10.22~88ae8f20-r1) to root...
+Downloading file:packages/uclient-fetch_2024.10.22~88ae8f20-r1_aarch64_generic.ipk
+Installing opkg (2024.10.16~38eccbb1-r1) to root...
+Downloading file:packages/opkg_2024.10.16~38eccbb1-r1_aarch64_generic.ipk
+Installing luci-lib-ipkg (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-lib-ipkg_26.049.66344~2b8e93c_all.ipk
+Installing xz-utils (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/xz-utils_5.6.2-r2_aarch64_generic.ipk
+Installing liblzma (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/liblzma_5.6.2-r2_aarch64_generic.ipk
+Installing xz (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/xz_5.6.2-r2_aarch64_generic.ipk
+Installing libattr (2.5.2-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libattr_2.5.2-r3_aarch64_generic.ipk
+Installing libacl (2.3.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libacl_2.3.2-r2_aarch64_generic.ipk
+Installing libbz2-1.0 (1.0.8-r1) to root...
+Downloading file:packages/libbz2-1.0_1.0.8-r1_aarch64_generic.ipk
+Installing bzip2 (1.0.8-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/bzip2_1.0.8-r1_aarch64_generic.ipk
+Installing tar (1.35-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/tar_1.35-r1_aarch64_generic.ipk
+Installing libuci-lua (2025.01.20~16ff0bad-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/libuci-lua_2025.01.20~16ff0bad-r1_aarch64_generic.ipk
+Installing luci-app-store (0.1.27-4-r13) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-store_0.1.27-4-r13_all.ipk
+Installing luci-app-ssr-plus (26.049.56386~1463113) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-ssr-plus_26.049.56386~1463113_all.ipk
+Installing coreutils-base64 (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/coreutils-base64_9.3-r1_aarch64_generic.ipk
+Installing dns2socks (2.1-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/dns2socks_2.1-r2_aarch64_generic.ipk
+Installing dns2tcp (1.1.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/dns2tcp_1.1.2-r2_aarch64_generic.ipk
+Installing libgmp10 (6.3.0-r1) to root...
+Downloading file:packages/libgmp10_6.3.0-r1_aarch64_generic.ipk
+Installing libnettle8 (3.9.1-r1) to root...
+Downloading file:packages/libnettle8_3.9.1-r1_aarch64_generic.ipk
+Installing kmod-ipt-ipset (6.6.75-r1) to root...
+Downloading file:packages/kmod-ipt-ipset_6.6.75-r1_aarch64_generic.ipk
+Installing libnfnetlink0 (1.0.2-r1) to root...
+Downloading file:packages/libnfnetlink0_1.0.2-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack-netlink (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-conntrack-netlink_6.6.75-r1_aarch64_generic.ipk
+Installing libnetfilter-conntrack3 (1.0.9-r2) to root...
+Downloading file:packages/libnetfilter-conntrack3_1.0.9-r2_aarch64_generic.ipk
+Installing dnsmasq-full (2.90-r4) to root...
+Downloading file:packages/dnsmasq-full_2.90-r4_aarch64_generic.ipk
+Installing libipset13 (7.21-r1) to root...
+Downloading file:packages/libipset13_7.21-r1_aarch64_generic.ipk
+Installing ipset (7.21-r1) to root...
+Downloading file:packages/ipset_7.21-r1_aarch64_generic.ipk
+Installing kmod-ipt-nat (6.6.75-r1) to root...
+Downloading file:packages/kmod-ipt-nat_6.6.75-r1_aarch64_generic.ipk
+Installing jq (1.7.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/jq_1.7.1-r1_aarch64_generic.ipk
+Installing kmod-nf-tproxy (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-tproxy_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-ipt-tproxy (6.6.75-r1) to root...
+Downloading file:packages/kmod-ipt-tproxy_6.6.75-r1_aarch64_generic.ipk
+Installing iptables-mod-tproxy (1.8.10-r1) to root...
+Downloading file:packages/iptables-mod-tproxy_1.8.10-r1_aarch64_generic.ipk
+Installing lua-neturl (1.1.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/lua-neturl_1.1.1-r3_all.ipk
+Installing microsocks (1.0.5-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/microsocks_1.0.5-r3_aarch64_generic.ipk
+Installing tcping (0.3-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/tcping_0.3-r2_aarch64_generic.ipk
+Installing resolveip (2) to root...
+Downloading file:packages/resolveip_2_aarch64_generic.ipk
+Installing libev (4.33-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libev_4.33-r2_aarch64_generic.ipk
+Installing libsodium (1.0.19-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libsodium_1.0.19-r1_aarch64_generic.ipk
+Installing libpcre2 (10.42-r1) to root...
+Downloading file:packages/libpcre2_10.42-r1_aarch64_generic.ipk
+Installing libudns (0.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/libudns_0.4-r1_aarch64_generic.ipk
+Installing shadowsocksr-libev-ssr-check (2.5.6-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/shadowsocksr-libev-ssr-check_2.5.6-r4_aarch64_generic.ipk
+Installing libustream-openssl20201210 (2024.07.28~99bd3d2b-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/libustream-openssl20201210_2024.07.28~99bd3d2b-r1_aarch64_generic.ipk
+Installing xray-core (25.2.21-r16) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/xray-core_25.2.21-r16_aarch64_generic.ipk
+Installing mosdns (5.3.3-r5) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/mosdns_5.3.3-r5_aarch64_generic.ipk
+Installing shadowsocks-rust-sslocal (1.22.0-r5) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/shadowsocks-rust-sslocal_1.22.0-r5_aarch64_generic.ipk
+Installing shadowsocks-rust-ssserver (1.22.0-r5) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/shadowsocks-rust-ssserver_1.22.0-r5_aarch64_generic.ipk
+Installing simple-obfs (0.0.5-34) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/simple-obfs_0.0.5-34_aarch64_generic.ipk
+Installing shadowsocksr-libev-ssr-local (2.5.6-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/shadowsocksr-libev-ssr-local_2.5.6-r4_aarch64_generic.ipk
+Installing shadowsocksr-libev-ssr-redir (2.5.6-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/shadowsocksr-libev-ssr-redir_2.5.6-r4_aarch64_generic.ipk
+Installing luci-nginx (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-nginx_25.049.66344~2b8e93c_all.ipk
+Installing nginx-ssl-util (1.7-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/nginx-ssl-util_1.7-r1_aarch64_generic.ipk
+Installing libxml2 (2.13.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/libxml2_2.13.4-r1_aarch64_generic.ipk
+Installing nginx-ssl (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/nginx-ssl_1.26.1-r1_aarch64_generic.ipk
+Installing uwsgi (2.0.26-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/uwsgi_2.0.26-r4_aarch64_generic.ipk
+Installing uwsgi-syslog-plugin (2.0.26-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/uwsgi-syslog-plugin_2.0.26-r4_aarch64_generic.ipk
+Installing uwsgi-cgi-plugin (2.0.26-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/uwsgi-cgi-plugin_2.0.26-r4_aarch64_generic.ipk
+Installing uwsgi-luci-support (2.0.26-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/uwsgi-luci-support_2.0.26-r4_aarch64_generic.ipk
+Installing nginx-mod-ubus (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/nginx-mod-ubus_1.26.1-r1_aarch64_generic.ipk
+Installing nginx-mod-luci (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/nginx-mod-luci_1.26.1-r1_aarch64_generic.ipk
+Installing libiwinfo-data (2024.10.20~b94f066e-r1) to root...
+Downloading file:packages/libiwinfo-data_2024.10.20~b94f066e-r1_aarch64_generic.ipk
+Installing libiwinfo20230701 (2024.10.20~b94f066e-r1) to root...
+Downloading file:packages/libiwinfo20230701_2024.10.20~b94f066e-r1_aarch64_generic.ipk
+Installing rpcd-mod-iwinfo (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-iwinfo_2024.09.17~9f4b86e7-r1_aarch64_generic.ipk
+Installing luci-mod-status (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-mod-status_26.049.66344~2b8e93c_aarch64_generic.ipk
+Installing luci-mod-system (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-mod-system_26.049.66344~2b8e93c_all.ipk
+Installing luci-mod-network (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-mod-network_26.049.66344~2b8e93c_all.ipk
+Installing luci-mod-admin-full (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-mod-admin-full_26.049.66344~2b8e93c_all.ipk
+Installing luci-theme-bootstrap (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-theme-bootstrap_26.049.66344~2b8e93c_all.ipk
+Installing kmod-nft-fib (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-fib_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nf-flow (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-flow_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-nat (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-nat_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-offload (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-offload_6.6.75-r1_aarch64_generic.ipk
+Installing jansson4 (2.14-r3) to root...
+Downloading file:packages/jansson4_2.14-r3_aarch64_generic.ipk
+Installing nftables-json (1.1.1-r1) to root...
+Downloading file:packages/nftables-json_1.1.1-r1_aarch64_generic.ipk
+Installing kmod-nf-ipt6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-ipt6_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-ip6tables (6.6.75-r1) to root...
+Downloading file:packages/kmod-ip6tables_6.6.75-r1_aarch64_generic.ipk
+Installing libip4tc2 (1.8.10-r1) to root...
+Downloading file:packages/libip4tc2_1.8.10-r1_aarch64_generic.ipk
+Installing libip6tc2 (1.8.10-r1) to root...
+Downloading file:packages/libip6tc2_1.8.10-r1_aarch64_generic.ipk
+Installing xtables-legacy (1.8.10-r1) to root...
+Downloading file:packages/xtables-legacy_1.8.10-r1_aarch64_generic.ipk
+Installing ip6tables-zz-legacy (1.8.10-r1) to root...
+Downloading file:packages/ip6tables-zz-legacy_1.8.10-r1_aarch64_generic.ipk
+Installing kmod-nft-fullcone (6.6.75.2023.05.17~07d93b62-r2) to root...
+Downloading file:packages/kmod-nft-fullcone_6.6.75.2023.05.17~07d93b62-r2_aarch64_generic.ipk
+Installing kmod-nf-socket (6.6.75-r1) to root...
+Downloading file:packages/kmod-nf-socket_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-socket (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-socket_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-nft-tproxy (6.6.75-r1) to root...
+Downloading file:packages/kmod-nft-tproxy_6.6.75-r1_aarch64_generic.ipk
+Installing firewall4 (2024.12.18~18fc0ead-r1) to root...
+Downloading file:packages/firewall4_2024.12.18~18fc0ead-r1_aarch64_generic.ipk
+Installing luci-app-firewall (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-app-firewall_26.049.66344~2b8e93c_all.ipk
+Installing luci-app-package-manager (26.052.06924~0c17b75) to root...
+Downloading file:packages/luci-app-package-manager_26.052.06924~0c17b75_all.ipk
+Installing luci-proto-ppp (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-proto-ppp_26.049.66344~2b8e93c_all.ipk
+Installing luci-proto-ipv6 (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-proto-ipv6_26.049.66344~2b8e93c_all.ipk
+Installing rpcd-mod-rrdns (20170710) to root...
+Downloading file:packages/rpcd-mod-rrdns_20170710_aarch64_generic.ipk
+Installing luci-theme-argon (26.043.56389~321e60d) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-theme-argon_26.043.56389~321e60d_all.ipk
+Installing jsonfilter (2024.01.23~594cfa86-r1) to root...
+Downloading file:packages/jsonfilter_2024.01.23~594cfa86-r1_aarch64_generic.ipk
+Installing miniupnpd-nftables (2.3.7-r6) to root...
+Downloading file:packages/miniupnpd-nftables_2.3.7-r6_aarch64_generic.ipk
+Installing libcap-ng (0.8.4-r1) to root...
+Downloading file:packages/libcap-ng_0.8.4-r1_aarch64_generic.ipk
+Installing prometheus-node-exporter-ucode-wireguard (2024.02.07-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/prometheus-node-exporter-ucode-wireguard_2024.02.07-r2_all.ipk
+Installing uhttpd (2023.06.25~34a8a74d-r4) to root...
+Downloading file:packages/uhttpd_2023.06.25~34a8a74d-r4_aarch64_generic.ipk
+Installing uhttpd-mod-ucode (2023.06.25~34a8a74d-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/uhttpd-mod-ucode_2023.06.25~34a8a74d-r4_aarch64_generic.ipk
+Installing prometheus-node-exporter-ucode (2024.02.07-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/prometheus-node-exporter-ucode_2024.02.07-r2_all.ipk
+Installing rpcd-mod-wireguard (1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/rpcd-mod-wireguard_1_aarch64_generic.ipk
+Package rpcd-mod-wireguard (1) installed in root is up to date.
+Installing wireguard-tools (1.0.20210914-r4) to root...
+Downloading file:packages/wireguard-tools_1.0.20210914-r4_aarch64_generic.ipk
+Installing autocore (3) to root...
+Downloading file:packages/autocore_3_aarch64_generic.ipk
+Installing base-files (1657~02.21.2025) to root...
+Downloading file:packages/base-files_1657~02.21.2025_aarch64_generic.ipk
+Installing netifd (2024.12.17~ea01ed41-r1) to root...
+Downloading file:packages/netifd_2024.12.17~ea01ed41-r1_aarch64_generic.ipk
+Installing fwtool (2019.11.12~8f7fe925-r1) to root...
+Downloading file:packages/fwtool_2019.11.12~8f7fe925-r1_aarch64_generic.ipk
+Installing procd-seccomp (2024.12.22~42d39376-r1) to root...
+Downloading file:packages/procd-seccomp_2024.12.22~42d39376-r1_aarch64_generic.ipk
+Installing busybox (1.36.1-r2) to root...
+Downloading file:packages/busybox_1.36.1-r2_aarch64_generic.ipk
+Package bash (5.2.32-r1) installed in root is up to date.
+Package block-mount (2024.07.14~408c2cc4-r1) installed in root is up to date.
+Package ca-bundle (20240203-r1) installed in root is up to date.
+Installing coremark (2023.01.25~d5fad6bd-r2) to root...
+Downloading file:packages/coremark_2023.01.25~d5fad6bd-r2_aarch64_generic.ipk
+Package curl (8.10.1-r1) installed in root is up to date.
+Package dnsmasq-full (2.90-r4) installed in root is up to date.
+Installing dropbear (2024.86-r1) to root...
+Downloading file:packages/dropbear_2024.86-r1_aarch64_generic.ipk
+Installing ds-lite (9) to root...
+Downloading file:packages/ds-lite_9_all.ipk
+Installing kmod-iptunnel6 (6.6.75-r1) to root...
+Downloading file:packages/kmod-iptunnel6_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-ip6-tunnel (6.6.75-r1) to root...
+Downloading file:packages/kmod-ip6-tunnel_6.6.75-r1_aarch64_generic.ipk
+Package e2fsprogs (1.47.0-r2) installed in root is up to date.
+Installing fdisk (2.40.2-r1) to root...
+Downloading file:packages/fdisk_2.40.2-r1_aarch64_generic.ipk
+Installing libfdisk1 (2.40.2-r1) to root...
+Downloading file:packages/libfdisk1_2.40.2-r1_aarch64_generic.ipk
+Package firewall4 (2024.12.18~18fc0ead-r1) installed in root is up to date.
+Package fstools (2024.07.14~408c2cc4-r1) installed in root is up to date.
+Installing htop (3.3.0-r2) to root...
+Downloading file:packages/htop_3.3.0-r2_aarch64_generic.ipk
+Package kernel (6.6.75~1-r1) installed in root is up to date.
+Installing kmod-drm-rockchip (6.6.75-r1) to root...
+Downloading file:packages/kmod-drm-rockchip_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-backlight (6.6.75-r1) to root...
+Downloading file:packages/kmod-backlight_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-dma-buf (6.6.75-r1) to root...
+Downloading file:packages/kmod-dma-buf_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-i2c-core (6.6.75-r1) to root...
+Downloading file:packages/kmod-i2c-core_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-drm (6.6.75-r1) to root...
+Downloading file:packages/kmod-drm_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb-sys-fops (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb-sys-fops_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb-cfb-copyarea (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb-cfb-copyarea_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb-cfb-fillrect (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb-cfb-fillrect_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb-cfb-imgblt (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb-cfb-imgblt_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-fb-sys-ram (6.6.75-r1) to root...
+Downloading file:packages/kmod-fb-sys-ram_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-drm-kms-helper (6.6.75-r1) to root...
+Downloading file:packages/kmod-drm-kms-helper_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-drm-display-helper (6.6.75-r1) to root...
+Downloading file:packages/kmod-drm-display-helper_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-gpio-button-hotplug (6.6.75-r5) to root...
+Downloading file:packages/kmod-gpio-button-hotplug_6.6.75-r5_aarch64_generic.ipk
+Installing kmod-lib-zstd (6.6.75-r1) to root...
+Downloading file:packages/kmod-lib-zstd_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-acompress (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-acompress_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-lib-xxhash (6.6.75-r1) to root...
+Downloading file:packages/kmod-lib-xxhash_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-r8169 (6.6.75-r1) to root...
+Downloading file:packages/kmod-r8169_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-mii (6.6.75-r1) to root...
+Downloading file:packages/kmod-mii_6.6.75-r1_aarch64_generic.ipk
+Installing r8169-firmware (20241110-r1) to root...
+Downloading file:packages/r8169-firmware_20241110-r1_aarch64_generic.ipk
+Installing kmod-libphy (6.6.75-r1) to root...
+Downloading file:packages/kmod-libphy_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-hwmon-core (6.6.75-r1) to root...
+Downloading file:packages/kmod-hwmon-core_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-phy-realtek (6.6.75-r1) to root...
+Downloading file:packages/kmod-phy-realtek_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-mdio-devres (6.6.75-r1) to root...
+Downloading file:packages/kmod-mdio-devres_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-tcp-bbr (6.6.75-r1) to root...
+Downloading file:packages/kmod-tcp-bbr_6.6.75-r1_aarch64_generic.ipk
+Package libc (1.2.5-r4) installed in root is up to date.
+Package libgcc1 (13.3.0-r4) installed in root is up to date.
+Installing libustream-mbedtls20201210 (2024.07.28~99bd3d2b-r1) to root...
+Downloading file:packages/libustream-mbedtls20201210_2024.07.28~99bd3d2b-r1_aarch64_generic.ipk
+Installing libmbedtls21 (3.6.2-r1) to root...
+Downloading file:packages/libmbedtls21_3.6.2-r1_aarch64_generic.ipk
+Installing logd (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/logd_2024.04.26~85f10530-r1_aarch64_generic.ipk
+Package lsblk (2.40.2-r1) installed in root is up to date.
+Installing luci-app-advancedplus (26.052.06924~0c17b75) to root...
+Downloading file:packages/luci-app-advancedplus_26.052.06924~0c17b75_all.ipk
+Installing luci-compat (26.049.66344~2b8e93c) to root...
+Downloading file:packages/luci-compat_26.049.66344~2b8e93c_all.ipk
+Installing luci-app-fan (26.049.56386~1463113) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-fan_26.049.56386~1463113_all.ipk
+Installing coreutils-stat (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/coreutils-stat_9.3-r1_aarch64_generic.ipk
+Installing kmod-thermal (6.6.75-r1) to root...
+Downloading file:packages/kmod-thermal_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-hwmon-pwmfan (6.6.75-r1) to root...
+Downloading file:packages/kmod-hwmon-pwmfan_6.6.75-r1_aarch64_generic.ipk
+Package luci-app-filemanager (26.049.66344~2b8e93c) installed in root is up to date.
+Package luci-app-firewall (26.049.66344~2b8e93c) installed in root is up to date.
+Package luci-app-package-manager (26.052.06924~0c17b75) installed in root is up to date.
+Installing luci-app-syscontrol (26.052.06924~0c17b75) to root...
+Downloading file:packages/luci-app-syscontrol_26.052.06924~0c17b75_all.ipk
+Installing luci-app-upnp (26.053.37712~30878b0) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-upnp_26.053.37712~30878b0_all.ipk
+Installing luci-app-wizard (26.052.06924~0c17b75) to root...
+Downloading file:packages/luci-app-wizard_26.052.06924~0c17b75_all.ipk
+Package luci-base (26.049.66344~2b8e93c) installed in root is up to date.
+Package luci-compat (26.049.66344~2b8e93c) installed in root is up to date.
+Installing luci-lib-fs (1.0-r2) to root...
+Downloading file:packages/luci-lib-fs_1.0-r2_all.ipk
+Package luci-lib-ipkg (26.049.66344~2b8e93c) installed in root is up to date.
+Installing mkf2fs (1.16.0-r3) to root...
+Downloading file:packages/mkf2fs_1.16.0-r3_aarch64_generic.ipk
+Installing libf2fs6 (1.16.0-r3) to root...
+Downloading file:packages/libf2fs6_1.16.0-r3_aarch64_generic.ipk
+Installing mtd (26) to root...
+Downloading file:packages/mtd_26_aarch64_generic.ipk
+Installing nano (8.3-r1) to root...
+Downloading file:packages/nano_8.3-r1_aarch64_generic.ipk
+Package netifd (2024.12.17~ea01ed41-r1) installed in root is up to date.
+Installing odhcp6c (2024.09.25~b6ae9ffa-r1) to root...
+Downloading file:packages/odhcp6c_2024.09.25~b6ae9ffa-r1_aarch64_generic.ipk
+Installing odhcpd-ipv6only (2024.05.08~a2988231-r1) to root...
+Downloading file:packages/odhcpd-ipv6only_2024.05.08~a2988231-r1_aarch64_generic.ipk
+Installing openssh-sftp-server (9.9_p1-r1) to root...
+Downloading file:packages/openssh-sftp-server_9.9_p1-r1_aarch64_generic.ipk
+Package opkg (2024.10.16~38eccbb1-r1) installed in root is up to date.
+Installing partx-utils (2.40.2-r1) to root...
+Downloading file:packages/partx-utils_2.40.2-r1_aarch64_generic.ipk
+Installing ppp (2.5.1-r1) to root...
+Downloading file:packages/ppp_2.5.1-r1_aarch64_generic.ipk
+Installing kmod-lib-crc-ccitt (6.6.75-r1) to root...
+Downloading file:packages/kmod-lib-crc-ccitt_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-slhc (6.6.75-r1) to root...
+Downloading file:packages/kmod-slhc_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-ppp (6.6.75-r1) to root...
+Downloading file:packages/kmod-ppp_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-macvlan (6.6.75-r1) to root...
+Downloading file:packages/kmod-macvlan_6.6.75-r1_aarch64_generic.ipk
+Installing shellsync (0.2-r2) to root...
+Downloading file:packages/shellsync_0.2-r2_aarch64_generic.ipk
+Installing kmod-crypto-null (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-null_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-aead (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-aead_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-manager (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-manager_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-hmac (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-hmac_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-sha512 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-sha512_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-sha3 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-sha3_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-rng (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-rng_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-user (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-user_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-arc4 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-arc4_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-sha1 (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-sha1_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-crypto-ecb (6.6.75-r1) to root...
+Downloading file:packages/kmod-crypto-ecb_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-mppe (6.6.75-r1) to root...
+Downloading file:packages/kmod-mppe_6.6.75-r1_aarch64_generic.ipk
+Installing ppp-mod-pppoe (2.5.1-r1) to root...
+Downloading file:packages/ppp-mod-pppoe_2.5.1-r1_aarch64_generic.ipk
+Installing kmod-pppox (6.6.75-r1) to root...
+Downloading file:packages/kmod-pppox_6.6.75-r1_aarch64_generic.ipk
+Installing kmod-pppoe (6.6.75-r1) to root...
+Downloading file:packages/kmod-pppoe_6.6.75-r1_aarch64_generic.ipk
+Package resolveip (2) installed in root is up to date.
+Installing swconfig (12) to root...
+Downloading file:packages/swconfig_12_aarch64_generic.ipk
+Installing uboot-envtools (2023.01-r1) to root...
+Downloading file:packages/uboot-envtools_2023.01-r1_aarch64_generic.ipk
+Package uci (2025.01.20~16ff0bad-r1) installed in root is up to date.
+Package uclient-fetch (2024.10.22~88ae8f20-r1) installed in root is up to date.
+Installing urandom-seed (3) to root...
+Downloading file:packages/urandom-seed_3_aarch64_generic.ipk
+Installing getrandom (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/getrandom_2024.04.26~85f10530-r1_aarch64_generic.ipk
+Installing urngd (2023.11.01~44365eb1-r1) to root...
+Downloading file:packages/urngd_2023.11.01~44365eb1-r1_aarch64_generic.ipk
+Installing wget-ssl (1.24.5-r1) to root...
+Downloading file:packages/wget-ssl_1.24.5-r1_aarch64_generic.ipk
+Installing zram-swap (32) to root...
+Downloading file:packages/zram-swap_32_all.ipk
+Installing kmod-zram (6.6.75-r1) to root...
+Downloading file:packages/kmod-zram_6.6.75-r1_aarch64_generic.ipk
+Installing luci-i18n-filemanager-zh-cn (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-i18n-filemanager-zh-cn_25.049.66344~2b8e93c_all.ipk
+Package luci-i18n-filemanager-zh-cn (25.049.66344~2b8e93c) installed in root is up to date.
+Installing luci-i18n-firewall-zh-cn (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-i18n-firewall-zh-cn_25.049.66344~2b8e93c_all.ipk
+Installing luci-i18n-package-manager-zh-cn (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-i18n-package-manager-zh-cn_25.049.66344~2b8e93c_all.ipk
+Installing luci-i18n-upnp-zh-cn (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-i18n-upnp-zh-cn_25.049.66344~2b8e93c_all.ipk
+Installing luci-i18n-base-zh-cn (25.049.66344~2b8e93c) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/luci-i18n-base-zh-cn_25.049.66344~2b8e93c_all.ipk
+Configuring kmod-dma-buf.
+Configuring kmod-i2c-core.
+Configuring kmod-backlight.
+Configuring kmod-fb.
+Configuring kmod-drm.
+Configuring kmod-nfnetlink.
+Configuring kmod-nf-reject.
+Configuring kmod-nf-reject6.
+Configuring kmod-nf-conntrack.
+Configuring kmod-nf-conntrack6.
+Configuring kmod-nf-nat.
+Configuring kmod-nf-log.
+Configuring kmod-nf-log6.
+Configuring kmod-crypto-hash.
+Configuring kmod-crypto-crc32c.
+Configuring kmod-lib-crc32c.
+Configuring kmod-nft-core.
+Configuring kmod-nf-tproxy.
+Configuring kmod-nft-tproxy.
+Configuring terminfo.
+Configuring libubox20240329.
+Configuring libuci20250120.
+Configuring liblua5.1.5.
+Configuring libuci-lua.
+Configuring libpcre2.
+Configuring libcap.
+Configuring libpthread.
+Configuring librt.
+Configuring libuuid1.
+Configuring uwsgi.
+Configuring uwsgi-syslog-plugin.
+Configuring uwsgi-cgi-plugin.
+Configuring uwsgi-luci-support.
+Configuring libstdcpp6.
+Configuring libubus20250102.
+Configuring libopenssl3.
+Configuring nginx-ssl-util.
+Configuring zlib.
+Configuring libxml2.
+Configuring nginx-ssl.
+Configuring libjson-c5.
+Configuring libblobmsg-json20240329.
+Configuring nginx-mod-ubus.
+Configuring nginx-mod-luci.
+Configuring openssh-sftp-server.
+Configuring liblucihttp0.
+Configuring cgi-io.
+Configuring lua.
+Configuring luci-lib-nixio.
+Configuring libnl-tiny1.
+Configuring luci-lib-ip.
+Configuring luci-lib-jsonc.
+Configuring liblucihttp-lua.
+Configuring luci-lib-base.
+Configuring kmod-macvlan.
+Configuring libbz2-1.0.
+Configuring kmod-crypto-null.
+Configuring kmod-crypto-aead.
+Configuring kmod-crypto-manager.
+Configuring kmod-crypto-hmac.
+Configuring kmod-crypto-sha512.
+Configuring kmod-crypto-sha3.
+Configuring kmod-crypto-rng.
+Configuring kmod-crypto-user.
+Configuring libf2fs6.
+Configuring mkf2fs.
+Configuring kmod-iptunnel6.
+Configuring kmod-ip6-tunnel.
+Configuring libev.
+Configuring libsodium.
+Configuring libudns.
+Configuring shadowsocksr-libev-ssr-check.
+Configuring shadow-utils.
+Configuring shadow-common.
+Configuring shadow-useradd.
+Configuring libblkid1.
+Configuring libmount1.
+Configuring libsmartcols1.
+Configuring mount-utils.
+Configuring ubusd.
+Configuring ubus.
+Configuring ubox.
+Configuring fstools.
+Configuring block-mount.
+Configuring libncurses6.
+Configuring lsblk.
+Configuring libcomerr0.
+Configuring libss2.
+Configuring libext2fs2.
+Configuring libe2p2.
+Configuring e2fsprogs.
+Configuring libparted.
+Configuring libreadline8.
+Configuring parted.
+Configuring smartmontools.
+Configuring smartd.
+Configuring kmod-md-mod.
+Configuring kmod-md-raid0.
+Configuring kmod-md-raid10.
+Configuring kmod-md-raid1.
+Configuring mdadm.
+Configuring libelf1.
+Configuring libbpf1.
+Configuring libmnl0.
+Configuring ip-full.
+Configuring uci.
+Configuring bash.
+Configuring quickstart.
+Configuring libcap-ng.
+Configuring libnftnl11.
+Configuring miniupnpd-nftables.
+Configuring libuclient20201210.
+Configuring uclient-fetch.
+Configuring opkg.
+Configuring kmod-nf-ipt.
+Configuring kmod-nft-compat.
+Configuring libuv1.
+Configuring libwebsockets-full.
+Configuring kmod-nft-nat.
+Configuring kmod-nft-fullcone.
+Configuring rpcd.
+Configuring jsonfilter.
+Configuring busybox.
+Configuring libiwinfo-data.
+Configuring libiwinfo20230701.
+Configuring coremark.
+Configuring kmod-hwmon-core.
+Configuring kmod-thermal.
+Configuring kmod-hwmon-pwmfan.
+Configuring jq.
+Configuring kmod-nft-fib.
+Configuring kmod-zram.
+Configuring zram-swap.
+Configuring libubus-lua.
+Configuring kmod-ipt-core.
+Configuring kmod-ipt-tproxy.
+Configuring nano.
+Configuring kmod-crypto-lib-chacha20.
+Configuring kmod-crypto-lib-poly1305.
+Configuring kmod-crypto-lib-chacha20poly1305.
+Configuring kmod-crypto-kpp.
+Configuring kmod-crypto-lib-curve25519.
+Configuring kmod-udptunnel4.
+Configuring kmod-udptunnel6.
+Configuring kmod-wireguard.
+Configuring rpcd-mod-wireguard.
+Configuring rpcd-mod-file.
+Configuring rpcd-mod-luci.
+Configuring libucode20230711.
+Configuring rpcd-mod-ucode.
+Configuring ucode.
+Configuring ucode-mod-fs.
+Configuring ucode-mod-uci.
+Configuring ucode-mod-ubus.
+Configuring ucode-mod-math.
+Configuring ucode-mod-html.
+Configuring liblucihttp-ucode.
+Configuring luci-base.
+Configuring ucode-mod-lua.
+Configuring luci-lua-runtime.
+Configuring luci-app-wizard.
+Configuring swconfig.
+Configuring libattr.
+Configuring libacl.
+Configuring liblzma.
+Configuring luci-mod-system.
+Configuring kmod-nf-flow.
+Configuring kmod-lib-crc-ccitt.
+Configuring getrandom.
+Configuring libxtables12.
+Configuring libiptext0.
+Configuring luci-lib-xterm.
+Configuring libustream-openssl20201210.
+Configuring r8169-firmware.
+Configuring luci-theme-bootstrap.
+Configuring kmod-slhc.
+Configuring kmod-ppp.
+Configuring kmod-pppox.
+Configuring kmod-pppoe.
+Configuring coreutils.
+Configuring coreutils-stat.
+Configuring luci-app-fan.
+Configuring kmod-fb-sys-fops.
+Configuring kmod-fb-cfb-copyarea.
+Configuring kmod-fb-cfb-fillrect.
+Configuring kmod-fb-cfb-imgblt.
+Configuring kmod-fb-sys-ram.
+Configuring kmod-drm-kms-helper.
+Configuring ca-bundle.
+Configuring mosdns.
+Configuring shellsync.
+Configuring jshn.
+Configuring libudebug.
+Configuring netifd.
+Configuring fwtool.
+Configuring libjson-script20240329.
+Configuring procd.
+Configuring procd-seccomp.
+Configuring base-files.
+Configuring rpcd-mod-iwinfo.
+Configuring luci-mod-status.
+Configuring luci-mod-network.
+Configuring luci-mod-admin-full.
+Configuring kmod-nft-offload.
+Configuring jansson4.
+Configuring nftables-json.
+Configuring libiptext6-0.
+Configuring libiptext-nft0.
+Configuring xtables-nft.
+Configuring iptables-nft.
+Configuring kmod-nf-ipt6.
+Configuring kmod-ip6tables.
+Configuring libip4tc2.
+Configuring libip6tc2.
+Configuring xtables-legacy.
+Configuring ip6tables-zz-legacy.
+Configuring kmod-nf-socket.
+Configuring kmod-nft-socket.
+Configuring firewall4.
+Configuring luci-app-firewall.
+Configuring luci-app-package-manager.
+Configuring luci-proto-ppp.
+Configuring luci-proto-ipv6.
+Configuring rpcd-mod-rrdns.
+Configuring luci-nginx.
+Configuring luci-compat.
+Configuring libnghttp2-14.
+Configuring libcurl4.
+Configuring curl.
+Configuring luci-app-advancedplus.
+Configuring ttyd.
+Configuring coreutils-base64.
+Configuring partx-utils.
+Configuring luci-app-ttyd.
+Configuring libmbedtls21.
+Configuring libustream-mbedtls20201210.
+Configuring kmod-mii.
+Configuring kmod-libphy.
+Configuring kmod-phy-realtek.
+Configuring kmod-mdio-devres.
+Configuring kmod-r8169.
+Configuring bzip2.
+Configuring uboot-envtools.
+Configuring resolveip.
+Configuring autocore.
+Configuring libnfnetlink0.
+Configuring kmod-nf-conntrack-netlink.
+Configuring libnetfilter-conntrack3.
+Configuring luci-app-syscontrol.
+Configuring shadowsocks-rust-ssserver.
+Configuring kmod-crypto-acompress.
+Configuring dns2socks.
+Configuring xz-utils.
+Configuring xz.
+Configuring tar.
+Configuring kmod-drm-display-helper.
+Configuring dns2tcp.
+Configuring luci-app-filemanager.
+Configuring luci-lib-ipkg.
+Configuring libgmp10.
+Configuring libnettle8.
+Configuring kmod-ipt-ipset.
+Configuring dnsmasq-full.
+Configuring libipset13.
+Configuring ipset.
+Configuring kmod-ipt-nat.
+Configuring iptables-mod-tproxy.
+Configuring lua-neturl.
+Configuring microsocks.
+Configuring tcping.
+Configuring xray-core.
+Configuring shadowsocks-rust-sslocal.
+Configuring simple-obfs.
+Configuring shadowsocksr-libev-ssr-local.
+Configuring shadowsocksr-libev-ssr-redir.
+Configuring luci-app-ssr-plus.
+Configuring odhcp6c.
+Configuring dropbear.
+Configuring luci-theme-argon.
+Configuring mtd.
+Configuring odhcpd-ipv6only.
+Configuring uhttpd.
+Configuring uhttpd-mod-ucode.
+Configuring prometheus-node-exporter-ucode.
+Configuring script-utils.
+Configuring coreutils-stty.
+Configuring taskd.
+Configuring luci-lib-taskd.
+Configuring urandom-seed.
+Configuring luci-i18n-package-manager-zh-cn.
+Configuring kmod-crypto-arc4.
+Configuring kmod-crypto-sha1.
+Configuring kmod-crypto-ecb.
+Configuring kmod-mppe.
+Configuring ppp.
+Configuring luci-app-quickstart.
+Configuring kmod-gpio-button-hotplug.
+Configuring logd.
+Configuring luci-app-store.
+Configuring wireguard-tools.
+Configuring ds-lite.
+Configuring prometheus-node-exporter-ucode-wireguard.
+Configuring libfdisk1.
+Configuring kmod-lib-xxhash.
+Configuring kmod-lib-zstd.
+Configuring luci-app-istorex.
+Configuring luci-app-upnp.
+Configuring htop.
+Configuring kmod-drm-rockchip.
+Configuring kmod-tcp-bbr.
+Configuring luci-i18n-base-zh-cn.
+Configuring luci-i18n-filemanager-zh-cn.
+Configuring fdisk.
+Configuring luci-i18n-upnp-zh-cn.
+Configuring wget-ssl.
+Configuring urngd.
+Configuring luci-i18n-firewall-zh-cn.
+Configuring ppp-mod-pppoe.
+Configuring luci-lib-fs.
+No packages removed.
+Installing my-default-settings (2-r13) to root...
+Downloading file:packages/my-default-settings_2-r13_all.ipk
+Configuring my-default-settings.
+
+Finalizing root filesystem...
+Enabling advancedplus
+Enabling boot
+Enabling bootcount
+Enabling cron
+Enabling dnsmasq
+Enabling done
+Enabling dropbear
+Enabling fanctrl
+Enabling firewall
+Enabling fstab
+Enabling gpio_switch
+Enabling istore
+Enabling led
+Enabling log
+Enabling luci-fan
+Enabling mdadm
+Enabling miniupnpd
+Enabling network
+Enabling nginx
+Enabling odhcpd
+Enabling packet_steering
+Enabling prometheus-node-exporter-ucode
+Enabling quickstart
+Enabling ram_release
+Enabling rpcd
+Enabling shadowsocksr
+Enabling smartd
+Enabling startdhns
+Enabling sysctl
+Enabling sysfixtime
+Enabling sysntpd
+Enabling system
+Enabling tasks
+Enabling ttyd
+Enabling ucitrack
+Enabling uhttpd
+Enabling umount
+Enabling urandom_seed
+Enabling urngd
+Enabling uwsgi
+Enabling wizard
+Enabling zram
+
+Building images...
+Parallel mksquashfs: Using 24 processors
+Creating 4.0 filesystem on /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/root.squashfs, block size 262144.
+
+[| ] 0/3034 0%
+[=============================================================\] 3034/3034 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 262144
+compressed data, compressed metadata, compressed fragments,
+no xattrs, compressed ids
+duplicates are removed
+Filesystem size 35202.66 Kbytes (34.38 Mbytes)
+28.10% of uncompressed filesystem size (125265.40 Kbytes)
+Inode table size 22536 bytes (22.01 Kbytes)
+20.94% of uncompressed inode table size (107613 bytes)
+Directory table size 29858 bytes (29.16 Kbytes)
+42.10% of uncompressed directory table size (70919 bytes)
+Number of duplicate files found 362
+Number of inodes 3225
+Number of files 2686
+Number of fragments 124
+Number of symbolic links 337
+Number of device nodes 1
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 201
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+root (0)
+Number of gids 1
+root (0)
+Image Name:
+Created: Fri Feb 21 10:01:54 2025
+Image Type: ARM Linux Script (uncompressed)
+Data Size: 511 Bytes = 0.50 KiB = 0.00 MiB
+Load Address: 00000000
+Entry Point: 00000000
+Contents:
+Image 0: 503 Bytes = 0.49 KiB = 0.00 MiB
+Creating filesystem with parameters:
+Size: 33554432
+Block size: 4096
+Blocks per group: 32768
+Inodes per group: 2048
+Inode size: 256
+Journal blocks: 0
+Label: kernel
+Blocks: 8192
+Block groups: 1
+Reserved blocks: 0
+Reserved block group size: 7
+Created filesystem with 14/2048 inodes and 4620/8192 blocks
+
+Calculating checksums...
+错误日志:
+
+Collected errors:
+* copy_file: unable to preserve ownership of `/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_core': Operation not permitted.
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/targets/rockchip/armv8/6.6.75/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_core
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/base/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_base
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/packages/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_packages
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/luci/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_luci
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/routing/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_routing
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/kwrt_kiddin9
+Downloading file:packages/Packages
+Updated list of available packages in /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/../../../../../../../../../../data/cache/default/default1/cache/rockchip/armv8/dl/imagebuilder
+grep: /etc/nginx/module.d: No such file or directory
+Collected errors:
+* pkg_hash_check_unresolved: cannot find dependency kmod-multimedia-input for kmod-drm-rockchip
+* satisfy_dependencies_for: Cannot satisfy the following dependencies for kmod-drm-rockchip:
+* kmod-multimedia-input
+Pseudo file "dev" exists in source filesystem "/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/root-rockchip/dev".
+Ignoring, exclude it (-e/-ef) to override.
++ '[' 6 -ne 5 ']'
++ '[' 6 -ne 6 ']'
++ OUTPUT=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz
++ KERNELSIZE=32
++ KERNELDIR=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz.boot
++ KERNELPARTTYPE=83
++ ROOTFSSIZE=2048
++ ROOTFSIMAGE=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/root.squashfs
++ ROOTFSPARTTYPE=83
++ ALIGN=32768
++ rm -f /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz
++ head=16
++ sect=63
+++ ptgen -o /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz -h 16 -s 63 -t 83 -p 32m -t 83 -p 2048m -l 32768
+part 0 32768
+part 0 2097152
++ set 33554432 33554432 100663296 2147483648
++ KERNELOFFSET=65536
++ KERNELSIZE=33554432
++ ROOTFSOFFSET=196608
++ ROOTFSSIZE=4194304
++ '[' -n 1 ']'
++ dd if=/dev/zero of=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz bs=512 seek=196608 conv=notrunc count=4194304
+4194304+0 records in
+4194304+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 7.65294 s, 281 MB/s
++ dd if=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/root.squashfs of=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz bs=512 seek=196608 conv=notrunc
+70405+1 records in
+70405+1 records out
+36047528 bytes (36 MB, 34 MiB) copied, 0.143774 s, 251 MB/s
++ '[' -n '' ']'
++ make_ext4fs -J -L kernel -l 33554432 -T 1740103314 /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz.kernel /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz.boot
++ dd if=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz.kernel of=/data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz bs=512 seek=65536 conv=notrunc
+65536+0 records in
+65536+0 records out
+33554432 bytes (34 MB, 32 MiB) copied, 0.155574 s, 216 MB/s
++ rm -f /data/cache/default/default1/cache/rockchip/armv8/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/kwrt-02.24.2025-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz.kernel
+459+1 records in
+459+1 records out
+235436 bytes (235 kB, 230 KiB) copied, 0.000999261 s, 236 MB/s
+8192+0 records in
+8192+0 records out
+4194304 bytes (4.2 MB, 4.0 MiB) copied, 0.0180012 s, 233 MB/s
+8192+0 records in
+8192+0 records out
+4194304 bytes (4.2 MB, 4.0 MiB) copied, 0.0171398 s, 245 MB/s
