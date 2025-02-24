@@ -8,3 +8,5 @@
 **说明**: 后台: 192.168.2.1 或 kwrt/  密码: root
 
 编译好的 r4插件 （内集成 wireguard 和 SSR-Plus）
+
+# 定制软件 luci-proto-wireguard prometheus-node-exporter-ucode-wireguard rpcd-mod-wireguard wireguard-tools kmod-wireguard -luci-proto-wireguard
